@@ -1,5 +1,5 @@
 # godot-snake
-The classic snake game except for it's poorly written in Godot Engine with GDScript.
+The classic snake game written (poorly) in Godot Engine with GDScript.
 
 # Build
 
@@ -17,12 +17,14 @@ Then follow the engine's recommended steps.
 
 # Decrease the binary size
 
-If you build the project as is, its size will be immense (around 67 MB, which is absurd for this tiny game). The reason is that the
+If you build the project as is, its size will be immense (around 65 MB, which is absurd for this tiny game). The reason is that the
 entirety of the engine will be included in the compiled file. That is 2D physics, 3D physics, 3D graphics, OpenGL,
 Vulkan, and all of the other stuff that is absolutely not necessary here (nor is it used).
 
 To combat it I've created a custom engine build profile where I disabled all of that. For it to take effect you need to compile the engine
-from source (refer to `Godot Engine Documentation -> Building from source`) with the following command:
+from source (refer to `Godot Engine Documentation -> Building from source`).
+
+When you get a grasp of the process from the documentation, place `profile.build` into the root directory of the source code and enter the following command:
 
 `scons p=*your_platform* target=template_release tools=no build_feature_profile="profile.build"`
 
