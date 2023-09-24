@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2hqhlirs5f3j"]
+
+[ext_resource type="Script" path="res://scenes/game/player.gd" id="1_bj2dn"]
+[ext_resource type="LabelSettings" uid="uid://cwlmdt0e8c7ia" path="res://assets/styles/labels_player.tres" id="2_iqkfa"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_bj2dn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.367188, 0.304688)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Paused" type="Label" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Paused"
+label_settings = ExtResource("2_iqkfa")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="GameOver" type="Label" parent="CanvasLayer"]
+visible = false
+visibility_layer = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Lol, you lost
+(press SPACE to return to the menu)"
+label_settings = ExtResource("2_iqkfa")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

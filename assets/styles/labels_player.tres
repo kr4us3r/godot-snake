@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://cwlmdt0e8c7ia"]
+
+[ext_resource type="FontFile" uid="uid://dnb2qb2d1g64v" path="res://assets/fonts/FlyingBird.otf" id="1_4upi5"]
+
+[resource]
+font = ExtResource("1_4upi5")
+font_size = 48
+font_color = Color(0.607843, 0.0470588, 0.235294, 1)
+outline_size = 1
+outline_color = Color(0, 0, 0, 1)

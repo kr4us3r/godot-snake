@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4cs7yjxm4mdl"]
+
+[ext_resource type="Script" path="res://scenes/game/apple.gd" id="1_fpmjg"]
+[ext_resource type="Texture2D" uid="uid://csh7kqgwsx6l3" path="res://assets/sprites/apple.png" id="2_fi4wx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oxbcr"]
+radius = 18.8976
+height = 59.7
+
+[node name="Apple" type="Area2D" groups=["food"]]
+script = ExtResource("1_fpmjg")
+
+[node name="apple_sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.234, 0.234)
+texture = ExtResource("2_fi4wx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 2)
+scale = Vector2(0.635, 0.4)
+shape = SubResource("CapsuleShape2D_oxbcr")
+one_way_collision_margin = 0.0
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -1,0 +1,47 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://do4nyvqpwcu2f"]
+
+[ext_resource type="FontFile" uid="uid://dnb2qb2d1g64v" path="res://assets/fonts/FlyingBird.otf" id="2_hej3p"]
+
+[sub_resource type="StyleBoxEmpty" id="6"]
+
+[sub_resource type="StyleBoxEmpty" id="2"]
+
+[sub_resource type="StyleBoxEmpty" id="3"]
+
+[sub_resource type="StyleBoxEmpty" id="4"]
+
+[sub_resource type="StyleBoxEmpty" id="5"]
+
+[resource]
+default_font = ExtResource("2_hej3p")
+default_font_size = 0
+Button/colors/font_color = Color(0.776471, 0.219608, 0.145098, 1)
+Button/colors/font_color_disabled = Color(1, 1, 1, 0.2)
+Button/colors/font_color_focus = Color(0.960784, 0.658824, 0.360784, 1)
+Button/colors/font_color_hover = Color(0.960784, 0.658824, 0.360784, 1)
+Button/colors/font_color_pressed = Color(0.847059, 0.266667, 0.129412, 1)
+Button/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+Button/colors/font_focus_color = Color(0.960784, 0.658824, 0.360784, 1)
+Button/colors/font_hover_color = Color(0.92549, 0.333333, 0.160784, 1)
+Button/colors/font_hover_pressed_color = Color(0.286275, 0.286275, 0.286275, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0.92549, 0.333333, 0.160784, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/h_separation = 2
+Button/constants/hseparation = 2
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 48
+Button/fonts/font = ExtResource("2_hej3p")
+Button/styles/disabled = SubResource("6")
+Button/styles/focus = SubResource("2")
+Button/styles/hover = SubResource("3")
+Button/styles/normal = SubResource("4")
+Button/styles/pressed = SubResource("5")
+Label/font_sizes/font_size = 36
+Label/fonts/font = ExtResource("2_hej3p")

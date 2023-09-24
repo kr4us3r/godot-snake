@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckrlyvehevcow"]
+
+[ext_resource type="Script" path="res://scenes/menu.gd" id="1_ih5ar"]
+[ext_resource type="Theme" uid="uid://do4nyvqpwcu2f" path="res://assets/styles/main_menu.tres" id="2_55e25"]
+
+[sub_resource type="Gradient" id="Gradient_lyr4h"]
+offsets = PackedFloat32Array(0.0129032, 0.296774, 1)
+colors = PackedColorArray(0.399722, 0.114657, 0.65062, 1, 0.575857, 0.166865, 0.235779, 1, 0.733005, 0.733005, 0.733005, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_eubi6"]
+gradient = SubResource("Gradient_lyr4h")
+width = 360
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ih5ar")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+light_mask = 2
+visibility_layer = 2
+layout_mode = 0
+offset_left = 433.0
+offset_top = 271.0
+offset_right = 681.0
+offset_bottom = 453.0
+theme = ExtResource("2_55e25")
+alignment = 1
+
+[node name="MaxScore" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_55e25")
+text = "
+
+"
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+light_mask = 2
+visibility_layer = 2
+layout_mode = 2
+text = "Start"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.345098, 0.203922, 0.286275, 1)
+self_modulate = Color(1, 1, 0.901961, 1)
+show_behind_parent = true
+texture = SubResource("GradientTexture2D_eubi6")
+offset = Vector2(540, 405)
+region_enabled = true
+region_rect = Rect2(0, 0, 1080, 810)
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

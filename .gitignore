@@ -1,0 +1,5 @@
+.godot
+.vscode
+score.cfg
+*.import
+export_presets.cfg

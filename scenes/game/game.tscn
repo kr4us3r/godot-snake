@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://w8ignebbhd8o"]
+
+[ext_resource type="Script" path="res://scenes/game/game.gd" id="1_7hjie"]
+[ext_resource type="Script" path="res://scenes/game/BG.gd" id="2_8cc4r"]
+[ext_resource type="PackedScene" uid="uid://b2hqhlirs5f3j" path="res://player.tscn" id="3_y2kms"]
+[ext_resource type="LabelSettings" uid="uid://b1pxm61qg4jwk" path="res://assets/styles/labels_game.tres" id="4_b1fve"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_7hjie")
+
+[node name="BG" type="Sprite2D" parent="."]
+modulate = Color(0.121569, 0.121569, 0.121569, 1)
+region_rect = Rect2(0, 0, 720, 540)
+script = ExtResource("2_8cc4r")
+
+[node name="Player" parent="." instance=ExtResource("3_y2kms")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Score" type="Label" parent="CanvasLayer"]
+offset_left = 12.0
+offset_right = 52.0
+offset_bottom = 28.0
+size_flags_horizontal = 4
+label_settings = ExtResource("4_b1fve")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Pause" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+label_settings = ExtResource("4_b1fve")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[connection signal="game_over_signal" from="Player" to="." method="_on_player_game_over_signal"]
+[connection signal="increase_score" from="Player" to="." method="_on_player_increase_score"]
