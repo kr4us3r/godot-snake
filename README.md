@@ -24,4 +24,6 @@ Vulkan, and all of the other stuff that is absolutely not necessary here (nor is
 To combat it I've created a custom engine build profile where I disabled all of that. For it to take effect you need to compile the engine
 from source (refer to `Godot Engine Documentation -> Building from source`) with the following command:
 
-`scons p=*your_platform* target=release tools=no build_feature_profile="profile.build"`
+`scons p=*your_platform* target=template_release tools=no build_feature_profile="profile.build"`
+
+I used the latest version of the engine's source code at the time of writing, Godot Engine 4.2.
