@@ -27,7 +27,7 @@ from source (refer to `Godot Engine Documentation -> Building from source`) with
 
 When you get a grasp of the process from the documentation, place `profile.build` into the root directory of the source code and enter the following command:
 
-`scons p=*your_platform* target=template_release tools=no debug_symbols=no disable_3d=yes optimize=size disable_advanced_gui=yes build_feature_profile="profile.build"`
+`scons p=*your_platform* target=template_release tools=no debug_symbols=no optimize=size disable_advanced_gui=yes build_feature_profile="profile.build"`
 
 Then, when exporting the project, insert the resulting engine binary as a custom template: `Export -> Options -> Custom Template -> Release`. It helped me halve the
 game's size (still a lot, but it's as far as I could get).
